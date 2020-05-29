@@ -4,7 +4,7 @@ from keras.layers import Dense
 from keras.models import Sequential
 from sklearn.model_selection import train_test_split
 
-dataset = pd.read_csv('/mnt/wines.csv')
+dataset = pd.read_csv('root/code/DL/wines.csv')
 
 y = dataset['Class']
 
@@ -30,10 +30,10 @@ accuracy = accuracy[1]*100
 print(accuracy)
 
 import os
-os.system("touch /mnt/accuracy.txt")
-os.system("echo {} > /mnt/accuracy.txt".format(accuracy))
+os.system("touch /root/code/DL/accuracy.txt")
+os.system("echo {} > /root/code/DL/accuracy.txt".format(accuracy))
 
-model.save('/mnt/multiclassNN.h5')
+model.save('/root/code/DL/multiclassNN.h5')
 
 
 
